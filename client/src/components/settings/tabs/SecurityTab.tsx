@@ -3,11 +3,10 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Input } from "@chakra-ui/input";
 import { Flex } from "@chakra-ui/layout";
 import { ChangeEvent, useContext, useState } from "react";
-import bcrypt from "bcryptjs";
 import { AuthContext } from "../../../providers/AuthProvider";
 import useToast from "../../hooks/useToast";
 import { useHistory } from "react-router";
-
+const bcrypt = require('bcryptjs')
 const SecurityTab = () => {
   const [input, setInput] = useState({ oldPass: "", newPass: "", conPass: "" });
   const [pending, setPending] = useState(false);
